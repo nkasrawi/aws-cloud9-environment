@@ -1,0 +1,17 @@
+Resources:
+  rCloud9Environment:
+    Type: AWS::Cloud9::EnvironmentEC2
+    Properties:
+      AutomaticStopTimeMinutes: 30
+      ConnectionType: CONNECT_SSM
+      Description: Web-based cloud development environment
+      InstanceType: m5.large	
+      Name: Cloud9Environment
+      Repositories: 
+        - PathComponent: '/repos'
+          RepositoryUrl: !GetAtt rCloud9WorkingRepository.CloneUrlHttp
+  rCloud9WorkingRepository:
+    Type: AWS::CodeCommit::Repository
+    Properties:
+      RepositoryName: Cloud9WorkingRepository
+      RepositoryDescription: A CodeCommit repository for stashing work from the Cloud9 IDE
