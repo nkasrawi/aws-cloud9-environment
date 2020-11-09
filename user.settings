@@ -1,0 +1,50 @@
+{
+    "ace": {
+        "@behavioursEnabled": true,
+        "@fontSize": 18,
+        "@keyboardmode": "vim",
+        "@showGutter": true,
+        "@showInvisibles": true,
+        "@theme": "@c9/ide/plugins/c9.ide.theme.jett/ace.themes/jett",
+        "custom-types": {
+            "json()": {
+                "settings": "javascript"
+            }
+        },
+        "statusbar": {
+            "@show": true
+        }
+    },
+    "build": {
+        "@autobuild": false
+    },
+    "collab": {
+        "@timeslider-visible": false
+    },
+    "configurations": {},
+    "debug": {
+        "@autoshow": true,
+        "@pause": 0
+    },
+    "general": {
+        "@autosave": "afterDelay",
+        "@skin": "jett-dark"
+    },
+    "key-bindings": {
+        "@platform": "auto",
+        "json()": []
+    },
+    "openfiles": {
+        "@show": false
+    },
+    "output": {},
+    "projecttree": {
+        "@showhidden": false
+    },
+    "tabs": {
+        "@show": true
+    },
+    "terminal": {
+        "@fontsize": 18
+    }
+}

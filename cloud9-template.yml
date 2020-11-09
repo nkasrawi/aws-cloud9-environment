@@ -8,8 +8,10 @@ Resources:
       InstanceType: m5.large	
       Name: Cloud9Environment
       Repositories: 
-        - PathComponent: '/repos'
+        - PathComponent: /repos/codecommit
           RepositoryUrl: !GetAtt rCloud9WorkingRepository.CloneUrlHttp
+        - PathComponent: /repos/aws-cloud9-environment
+          RepositoryUrl: https://github.com/scottenriquez/aws-cloud9-environment.git
   rCloud9WorkingRepository:
     Type: AWS::CodeCommit::Repository
     Properties:
