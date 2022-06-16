@@ -1,3 +1,7 @@
+Parameters:
+  VpcName:
+    Description: Choose which VPC to use
+    Type: String
 Resources:
   rCloud9Environment:
     Type: AWS::Cloud9::EnvironmentEC2
@@ -12,6 +16,11 @@ Resources:
           RepositoryUrl: !GetAtt rCloud9WorkingRepository.CloneUrlHttp
         - PathComponent: /repos/aws-cloud9-environment
           RepositoryUrl: https://github.siriusxm.com/nkasrawi/aws-cloud9-environment.git
+      SubnetId: !ImportValue
+        Fn::Join:
+          - '-'
+          - - !Ref 'VpcName'
+            - 'PublicSubnetA'
   rCloud9WorkingRepository:
     Type: AWS::CodeCommit::Repository
     Properties:
