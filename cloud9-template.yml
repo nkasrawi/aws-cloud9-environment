@@ -5,7 +5,7 @@ Resources:
       AutomaticStopTimeMinutes: 30
       ConnectionType: CONNECT_SSM
       Description: Web-based cloud development environment
-      InstanceType: t3.2xlarge	
+      InstanceType: t3.2xlarge
       Name: Cloud9Environment
       Repositories: 
         - PathComponent: /repos/codecommit
