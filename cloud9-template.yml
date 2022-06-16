@@ -25,6 +25,8 @@ Resources:
           - '-'
           - - !Ref 'VpcName'
             - 'PublicSubnetA'
+      ImageId: amazonlinux-2-x86_64
+      OwnerArn: arn:aws:sts::254508885371:assumed-role/ADFS-Devops-Admin/nawwar.kasrawi@siriusxm.com
   rCloud9WorkingRepository:
     Type: AWS::CodeCommit::Repository
     Properties:
