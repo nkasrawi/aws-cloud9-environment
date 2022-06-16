@@ -5,13 +5,13 @@ Resources:
       AutomaticStopTimeMinutes: 30
       ConnectionType: CONNECT_SSM
       Description: Web-based cloud development environment
-      InstanceType: m5.large	
+      InstanceType: t3.2xlarge	
       Name: Cloud9Environment
       Repositories: 
         - PathComponent: /repos/codecommit
           RepositoryUrl: !GetAtt rCloud9WorkingRepository.CloneUrlHttp
         - PathComponent: /repos/aws-cloud9-environment
-          RepositoryUrl: https://github.com/scottenriquez/aws-cloud9-environment.git
+          RepositoryUrl: https://github.siriusxm.com/nkasrawi/aws-cloud9-environment.git
   rCloud9WorkingRepository:
     Type: AWS::CodeCommit::Repository
     Properties:
