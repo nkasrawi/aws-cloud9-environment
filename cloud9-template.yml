@@ -15,7 +15,7 @@ Resources:
         - PathComponent: /repos/codecommit
           RepositoryUrl: !GetAtt rCloud9WorkingRepository.CloneUrlHttp
         - PathComponent: /repos/aws-cloud9-environment
-          RepositoryUrl: https://github.siriusxm.com/nkasrawi/aws-cloud9-environment.git
+          RepositoryUrl: https://github.com/nkasrawi/aws-cloud9-environment.git
       SubnetId: !ImportValue
         Fn::Join:
           - '-'
