@@ -2,6 +2,10 @@ Parameters:
   VpcName:
     Description: Choose which VPC to use
     Type: String
+  InstanceType:
+    Description: Instance type
+    Type: String
+    Default: t3.2xlarge
 Resources:
   rCloud9Environment:
     Type: AWS::Cloud9::EnvironmentEC2
@@ -9,7 +13,7 @@ Resources:
       AutomaticStopTimeMinutes: 30
       ConnectionType: CONNECT_SSM
       Description: Web-based cloud development environment
-      InstanceType: t3.2xlarge
+      InstanceType: !Ref 'InstanceType'
       Name: Cloud9Environment
       Repositories: 
         - PathComponent: /repos/codecommit
